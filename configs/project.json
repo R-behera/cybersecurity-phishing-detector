@@ -9,7 +9,8 @@
     "phishing",
     "detection"
   ],
-  "accent": "#577590",
+  "accent": "#58c82c",
+  "secondary_accent": "#a9a72c",
   "dashboard_metrics": [
     {
       "label": "Model Lift",
@@ -45,5 +46,52 @@
     "The primary value proposition is: Score phishing risk from message content and metadata and surface suspicious indicators to analysts.",
     "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
     "Typical stakeholders include analytics, operations, product, and leadership teams working on cyber, phishing, detection."
+  ],
+  "app_archetype": "watchtower",
+  "ui_profile": {
+    "layout": "rail",
+    "surface": "sand",
+    "font_stack": "\"Avenir Next\", \"Segoe UI\", sans-serif",
+    "radius": 23,
+    "shadow": 65,
+    "eyebrow_style": "outline",
+    "module_columns": 2,
+    "hero_align": "left",
+    "headline_mode": "normal"
+  },
+  "app_modules": [
+    {
+      "label": "Signal 01",
+      "title": "Incident Prioritizer",
+      "description": "Simulate how incoming events are scored before they hit an operator queue.",
+      "endpoint": "/score",
+      "input_mode": "json",
+      "cta": "Prioritize",
+      "prefill": "{\n  \"features\": {\n    \"engagement_score\": 68,\n    \"tenure_days\": 168,\n    \"payment_miss_count\": 2,\n    \"segment\": \"consumer\",\n    \"priority_flag\": false\n  }\n}",
+      "hint": "Risk band and top signals will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Signal 02",
+      "title": "Alert Delta Review",
+      "description": "Compare current operating metrics with a baseline to explain what changed.",
+      "endpoint": "/analyze",
+      "input_mode": "json",
+      "cta": "Compare Signals",
+      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 33.2,\n    \"activation\": 35.0,\n    \"retention\": 48.4,\n    \"revenue\": 75.4\n  },\n  \"baseline\": {\n    \"acquisition\": 30.54,\n    \"activation\": 32.2,\n    \"retention\": 44.53,\n    \"revenue\": 69.37\n  }\n}",
+      "hint": "Operational movement summary will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Signal 03",
+      "title": "Triage Playbook",
+      "description": "Generate an action-oriented response plan for the next incident handling step.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Build Playbook",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for Cybersecurity Phishing Detector.\",\n  \"features\": {\n    \"engagement_score\": 68,\n    \"tenure_days\": 168,\n    \"payment_miss_count\": 2,\n    \"segment\": \"consumer\",\n    \"priority_flag\": false\n  },\n  \"metrics\": {\n    \"acquisition\": 33.2,\n    \"activation\": 35.0,\n    \"retention\": 48.4,\n    \"revenue\": 75.4\n  }\n}",
+      "hint": "Suggested next actions and rationale will appear here.",
+      "span": "wide"
+    }
   ]
 }
