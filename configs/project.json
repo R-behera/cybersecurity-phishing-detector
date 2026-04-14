@@ -1,0 +1,49 @@
+{
+  "slug": "cybersecurity-phishing-detector",
+  "title": "Cybersecurity Phishing Detector",
+  "project_type": "ml",
+  "domain": "Cybersecurity",
+  "summary": "Score phishing risk from message content and metadata and surface suspicious indicators to analysts.",
+  "tags": [
+    "cyber",
+    "phishing",
+    "detection"
+  ],
+  "accent": "#577590",
+  "dashboard_metrics": [
+    {
+      "label": "Model Lift",
+      "value": "63%",
+      "delta": "+6.4%"
+    },
+    {
+      "label": "Serving P95",
+      "value": "116ms",
+      "delta": "-12ms"
+    },
+    {
+      "label": "Data Freshness",
+      "value": "5h",
+      "delta": "steady"
+    }
+  ],
+  "sample_features": {
+    "engagement_score": 68,
+    "tenure_days": 168,
+    "payment_miss_count": 2,
+    "segment": "consumer",
+    "priority_flag": false
+  },
+  "sample_metrics": {
+    "acquisition": 33.2,
+    "activation": 35.0,
+    "retention": 48.4,
+    "revenue": 75.4
+  },
+  "knowledge_base": [
+    "Cybersecurity Phishing Detector is positioned as a Cybersecurity starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Score phishing risk from message content and metadata and surface suspicious indicators to analysts.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on cyber, phishing, detection."
+  ]
+}

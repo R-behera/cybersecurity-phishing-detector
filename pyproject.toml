@@ -1,0 +1,15 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cybersecurity-phishing-detector"
+version = "0.1.0"
+description = "Score phishing risk from message content and metadata and surface suspicious indicators to analysts."
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
