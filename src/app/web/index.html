@@ -1,114 +1,29 @@
-
-        <!doctype html>
-        <html lang="en">
-        <head>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>Cybersecurity Phishing Detector</title>
-          <link rel="stylesheet" href="./styles.css">
-        </head>
-        <body class="surface-sand">
-          <div class="page layout-rail eyebrow-outline headline-normal modules-2 hero-align-left">
-            <section class="hero">
-              <div class="panel hero-copy">
-                <span class="eyebrow" data-health>Signal Watchtower</span>
-                <h1 id="project-title">Cybersecurity Phishing Detector</h1>
-                <p id="project-summary" class="lead">Score phishing risk from message content and metadata and surface suspicious indicators to analysts.</p>
-                <ul id="project-tags" class="tag-list">
-                  <li>cyber</li><li>phishing</li><li>detection</li>
-                </ul>
-              </div>
-              <div class="panel hero-side">
-                <div class="metric-grid">
-                  <article class='card'><span>Model Lift</span><strong>63%</strong><em>+6.4%</em></article>
-<article class='card'><span>Serving P95</span><strong>116ms</strong><em>-12ms</em></article>
-<article class='card'><span>Data Freshness</span><strong>5h</strong><em>steady</em></article>
-                </div>
-                <div class="mini-grid">
-                  <article class='mini-card'><span>Project Type</span><strong>ML</strong></article><article class='mini-card'><span>Domain</span><strong>Cybersecurity</strong></article><article class='mini-card'><span>Application</span><strong>Signal Watchtower</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
-                </div>
-              </div>
-            </section>
-            <section class="app-grid">
-              <article class="panel module js-module span-normal">
-          <div class="module-header">
-            <span>Signal 01</span>
-            <h2>Incident Prioritizer</h2>
-            <p>Simulate how incoming events are scored before they hit an operator queue.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;features&quot;: {
-    &quot;engagement_score&quot;: 68,
-    &quot;tenure_days&quot;: 168,
-    &quot;payment_miss_count&quot;: 2,
-    &quot;segment&quot;: &quot;consumer&quot;,
-    &quot;priority_flag&quot;: false
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/score" data-input-mode="json">Prioritize</button>
-          </div>
-          <pre class="js-output">Risk band and top signals will appear here.</pre>
-        </article>
-<article class="panel module js-module span-normal">
-          <div class="module-header">
-            <span>Signal 02</span>
-            <h2>Alert Delta Review</h2>
-            <p>Compare current operating metrics with a baseline to explain what changed.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 33.2,
-    &quot;activation&quot;: 35.0,
-    &quot;retention&quot;: 48.4,
-    &quot;revenue&quot;: 75.4
-  },
-  &quot;baseline&quot;: {
-    &quot;acquisition&quot;: 30.54,
-    &quot;activation&quot;: 32.2,
-    &quot;retention&quot;: 44.53,
-    &quot;revenue&quot;: 69.37
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/analyze" data-input-mode="json">Compare Signals</button>
-          </div>
-          <pre class="js-output">Operational movement summary will appear here.</pre>
-        </article>
-<article class="panel module js-module span-wide">
-          <div class="module-header">
-            <span>Signal 03</span>
-            <h2>Triage Playbook</h2>
-            <p>Generate an action-oriented response plan for the next incident handling step.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;prompt&quot;: &quot;Recommend the next best action for Cybersecurity Phishing Detector.&quot;,
-  &quot;features&quot;: {
-    &quot;engagement_score&quot;: 68,
-    &quot;tenure_days&quot;: 168,
-    &quot;payment_miss_count&quot;: 2,
-    &quot;segment&quot;: &quot;consumer&quot;,
-    &quot;priority_flag&quot;: false
-  },
-  &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 33.2,
-    &quot;activation&quot;: 35.0,
-    &quot;retention&quot;: 48.4,
-    &quot;revenue&quot;: 75.4
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/recommend" data-input-mode="json">Build Playbook</button>
-          </div>
-          <pre class="js-output">Suggested next actions and rationale will appear here.</pre>
-        </article>
-            </section>
-            <footer class="footer">
-              <span>Cybersecurity • ML • Signal Watchtower</span>
-              <span>cybersecurity-phishing-detector</span>
-            </footer>
-          </div>
-          <script id="bootstrap-data" type="application/json">{"project": {"slug": "cybersecurity-phishing-detector", "title": "Cybersecurity Phishing Detector", "project_type": "ml", "domain": "Cybersecurity", "summary": "Score phishing risk from message content and metadata and surface suspicious indicators to analysts.", "tags": ["cyber", "phishing", "detection"]}, "app_archetype": "watchtower", "ui_profile": {"layout": "rail", "surface": "sand", "font_stack": "\"Avenir Next\", \"Segoe UI\", sans-serif", "radius": 23, "shadow": 65, "eyebrow_style": "outline", "module_columns": 2, "hero_align": "left", "headline_mode": "normal"}, "app_modules": [{"label": "Signal 01", "title": "Incident Prioritizer", "description": "Simulate how incoming events are scored before they hit an operator queue.", "endpoint": "/score", "input_mode": "json", "cta": "Prioritize", "prefill": "{\n  \"features\": {\n    \"engagement_score\": 68,\n    \"tenure_days\": 168,\n    \"payment_miss_count\": 2,\n    \"segment\": \"consumer\",\n    \"priority_flag\": false\n  }\n}", "hint": "Risk band and top signals will appear here.", "span": "normal"}, {"label": "Signal 02", "title": "Alert Delta Review", "description": "Compare current operating metrics with a baseline to explain what changed.", "endpoint": "/analyze", "input_mode": "json", "cta": "Compare Signals", "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 33.2,\n    \"activation\": 35.0,\n    \"retention\": 48.4,\n    \"revenue\": 75.4\n  },\n  \"baseline\": {\n    \"acquisition\": 30.54,\n    \"activation\": 32.2,\n    \"retention\": 44.53,\n    \"revenue\": 69.37\n  }\n}", "hint": "Operational movement summary will appear here.", "span": "normal"}, {"label": "Signal 03", "title": "Triage Playbook", "description": "Generate an action-oriented response plan for the next incident handling step.", "endpoint": "/recommend", "input_mode": "json", "cta": "Build Playbook", "prefill": "{\n  \"prompt\": \"Recommend the next best action for Cybersecurity Phishing Detector.\",\n  \"features\": {\n    \"engagement_score\": 68,\n    \"tenure_days\": 168,\n    \"payment_miss_count\": 2,\n    \"segment\": \"consumer\",\n    \"priority_flag\": false\n  },\n  \"metrics\": {\n    \"acquisition\": 33.2,\n    \"activation\": 35.0,\n    \"retention\": 48.4,\n    \"revenue\": 75.4\n  }\n}", "hint": "Suggested next actions and rationale will appear here.", "span": "wide"}], "sample_features": {"engagement_score": 68, "tenure_days": 168, "payment_miss_count": 2, "segment": "consumer", "priority_flag": false}, "sample_metrics": {"acquisition": 33.2, "activation": 35.0, "retention": 48.4, "revenue": 75.4}, "knowledge_base": ["Cybersecurity Phishing Detector is positioned as a Cybersecurity starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.", "The primary value proposition is: Score phishing risk from message content and metadata and surface suspicious indicators to analysts.", "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.", "Typical stakeholders include analytics, operations, product, and leadership teams working on cyber, phishing, detection."], "dashboard_metrics": [{"label": "Model Lift", "value": "63%", "delta": "+6.4%"}, {"label": "Serving P95", "value": "116ms", "delta": "-12ms"}, {"label": "Data Freshness", "value": "5h", "delta": "steady"}]}</script>
-          <script src="./app.js"></script>
-        </body>
-        </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersecurity Phishing Detector App</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div id="scene" class="app-scene">
+    <header class="shell hero">
+      <div>
+        <span class="eyebrow">Applied AI product systems</span>
+        <h1>Cybersecurity Phishing Detector</h1>
+        <p>![Demo Screenshot](demo/screenshot.png)</p>
+      </div>
+      <aside class="status-card">
+        <div class="pill">API connected</div>
+        <div class="pill">operations lead</div>
+        <div class="pill">neural-ribbon</div>
+      </aside>
+    </header>
+    <section id="metrics" class="grid metrics"></section>
+    <section id="signals" class="grid signals"></section>
+  </div>
+  <script>window.PROJECT_MANIFEST = {"slug": "cybersecurity-phishing-detector", "title": "Cybersecurity Phishing Detector", "summary": "![Demo Screenshot](demo/screenshot.png)", "domain": "Applied AI product systems", "audience": "operations lead", "promise": "Turn promising technical capability into a production-shaped workflow for real teams.", "hero": ["Production-grade app scaffold with API, CI, tests, Docker, and GitHub Pages landing.", "3D landing surface designed for GitHub Pages and recruiter-friendly storytelling.", "App backend structured for local or container deployment without changing the product narrative."], "kpis": [{"label": "Workflow clarity", "value": "96%", "note": "Operator actions mapped to product stages"}, {"label": "Deployment posture", "value": "API + Docker", "note": "Local and containerized startup paths"}, {"label": "Presentation layer", "value": "3D Pages ready", "note": "Static GitHub landing page included"}], "stages": ["ingest", "validate", "analyze", "decide", "monitor"], "cards": [{"title": "Operator cockpit", "body": "One-screen surface for the operations lead to understand what matters first."}, {"title": "API contract", "body": "Structured endpoints for health, manifest, readiness, and showcase data."}, {"title": "Deployment path", "body": "Repository includes Docker, Compose, CI workflow, and a Pages-ready landing surface."}], "scene": "neural-ribbon", "theme": {"bg": "#0f0c07", "surface": "#1f1811", "ink": "#fff8ef", "muted": "#cab59a", "accent": "#ffb15e", "accent2": "#7ef7d0"}, "pages_url": "https://r-behera.github.io/cybersecurity-phishing-detector/", "api_examples": {"health": {"status": "ok", "project": "cybersecurity-phishing-detector"}, "readiness": {"api": "ready", "landing_page": "docs/index.html", "container": "Dockerfile present"}, "signals": [{"name": "Decision coverage", "status": "strong", "detail": "App and landing narrative aligned"}, {"name": "Operator context", "status": "strong", "detail": "Primary user anchored as operations lead"}, {"name": "Delivery path", "status": "ready", "detail": "Pages + containerized app scaffold generated"}]}};</script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
